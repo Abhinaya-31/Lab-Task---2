@@ -1,0 +1,58 @@
+#include<stdio.h>
+struct Student{
+  char name[100];
+  int age;
+  int TLmarks;
+};
+
+int main() {
+  struct Student arr[2];
+  int sum=0;
+  float average;
+  printf("Enter details of two Students.\n");
+    for(int i=0; i<2; i++) {
+    printf("\nInsert details of Student %d.\n",i+1);
+    printf("Enter Student Name : ");
+    fgets(arr[i].name,sizeof(arr[i].name),stdin);
+    printf("Enter Student Age : ");
+    scanf("%d",&arr[i].age);
+    printf("Enter Total Marks : ");
+    scanf("%d",&arr[i].TLmarks);
+    getchar();
+    }for(int i=0; i<2; i++) {
+    printf("\nDetails of Student %d :\n",i+1);
+    printf("Name : %s",arr[i].name);
+    printf("Age : %d\n",arr[i].age);
+    printf("Total Marks : %d\n",arr[i].TLmarks);
+  }
+  for(int i=0; i<2 ;i++) {
+    sum += arr[i].TLmarks;
+  }
+   average = sum/2;
+   printf("Average of Total Marks of two Students is : %f\n",average);
+}
+
+
+OUTPUT:-
+Enter details of two Students.
+
+Insert details of Student 1.
+Enter Student Name : Abhinaya
+Enter Student Age : 17
+Enter Total Marks : 90
+
+Insert details of Student 2.
+Enter Student Name : chandana
+Enter Student Age : 18
+Enter Total Marks : 98
+
+Details of Student 1 :
+Name : Abhinaya
+Age : 17
+Total Marks : 90
+
+Details of Student 2 :
+Name : chandana
+Age : 18
+Total Marks : 98
+Average of Total Marks of two Students is : 94.000000
