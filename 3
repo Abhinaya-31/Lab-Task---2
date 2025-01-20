@@ -1,0 +1,31 @@
+#include <stdio.h>
+struct Complex {
+    float real;
+    float imag;
+};
+int main() {
+    struct Complex n1, n2, sum, product;
+    printf("\nEnter the real and imaginary parts of the first complex number: ");
+    scanf("%f %f", &n1.real, &n1.imag);
+
+    printf("\nEnter the real and imaginary parts of the second complex number: ");
+    scanf("%f %f", &n2.real, &n2.imag);
+    sum.real = n1.real + n2.real;
+    sum.imag = n1.imag + n2.imag;
+
+    product.real = (n1.real * n2.real) - (n1.imag * n2.imag);
+    product.imag = (n1.real * n2.imag) + (n1.imag * n2.real);
+    printf("\nSum of the complex numbers: %.2f + %.2fi\n", sum.real, sum.imag);
+    printf("Product of the complex numbers: %.2f + %.2fi\n", product.real, product.imag);
+    return 0;
+}
+
+
+OUTPUT:-
+
+Enter the real and imaginary parts of the first complex number: 2 3
+
+Enter the real and imaginary parts of the second complex number: 4 5
+
+Sum of the complex numbers: 6.00 + 8.00i
+Product of the complex numbers: -7.00 + 22.00i
